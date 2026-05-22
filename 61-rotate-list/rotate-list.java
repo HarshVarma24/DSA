@@ -19,6 +19,7 @@ class Solution {
             len++;
         }
         k = k % len;
+        if(k == 0) return head;
         
         temp.next = head;
         int node_before_newHead = len - k;
