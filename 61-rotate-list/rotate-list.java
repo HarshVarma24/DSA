@@ -26,11 +26,9 @@ class Solution {
         ListNode newTail = head;
 
         for(int i = 0; i < node_before_newHead - 1; i++){
-            System.out.print(newTail.val + "->");
             newTail = newTail.next;
         }
         ListNode newHead = newTail.next;
-        System.out.print(newHead.val);
         newTail.next = null;
 
         return newHead;
