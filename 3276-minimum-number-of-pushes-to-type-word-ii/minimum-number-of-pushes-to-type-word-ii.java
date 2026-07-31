@@ -5,11 +5,6 @@ class Solution {
             freq[ch - 'a']++; 
         }
         Arrays.sort(freq);
-
-        for(int i = 0; i < freq.length; i++){
-            System.out.println(freq[i]);
-        }
-
         int ans = 0;
         int idx = 0;
 
