@@ -1,0 +1,19 @@
+class Solution {
+    public boolean uniformArray(int[] nums1) {
+        int min_even = Integer.MAX_VALUE;
+        int min_odd = Integer.MAX_VALUE;
+
+        for(int num : nums1){
+            if(num % 2 == 0){
+                min_even = Math.min(min_even, num);
+            }
+            else{
+                min_odd = Math.min(min_odd, num);
+            }
+        }
+        if(min_odd == Integer.MAX_VALUE){
+            return true;
+        }
+        return min_odd < min_even;
+    }
+}
