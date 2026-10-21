@@ -10,8 +10,13 @@ class Solution {
         for(int i = 0; i < k; i++){
             int temp = pq.poll();
             res += temp;
-            double update_val = (double)temp/3;
-            pq.add((int)Math.ceil(update_val));
+            //double update_val = (double)temp/3;
+            //pq.add((int)Math.ceil(update_val));
+            if(temp % 3 == 0){
+                pq.add(temp / 3);
+            }else{
+                pq.add((temp / 3)+1);
+            }
         }
         return res;
     }
