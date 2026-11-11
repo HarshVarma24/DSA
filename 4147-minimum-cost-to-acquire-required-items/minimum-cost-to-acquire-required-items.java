@@ -8,7 +8,7 @@ class Solution {
         int extra1 = need1 - cnt;
         int extra2 = need2 - cnt;
 
-        long total_cost = cnt * p3 + (extra1 * p1) + (extra2 * p2);
+        long total_cost = (extra1 * p1) + (extra2 * p2) + cnt * p3;
         return total_cost;
     }
 }
